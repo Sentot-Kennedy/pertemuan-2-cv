@@ -1,0 +1,190 @@
+/* ===== Variabel warna & font ===== */
+:root {
+  --gelap: #474b55;
+  --teks: #33363e;
+  --oranye: #ff9b2f;
+  --abu: #ebebeb;
+  --putih: #ffffff;
+  --font-judul: "Syne", "Segoe UI", Arial, sans-serif;
+  --font-isi: "Montserrat", "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-isi);
+  color: var(--teks);
+  background: var(--abu);
+}
+
+/* ===== Halaman A4 (latar belakang abu-gelap-oranye) ===== */
+.halaman {
+  width: 100%;
+  max-width: 800px;
+  min-height: 1132px;           /* perbandingan A4 */
+  margin: 0 auto;
+  padding: 38px 44px 38px;
+  background: linear-gradient(
+    to bottom,
+    var(--gelap) 0 29%,
+    var(--oranye) 29% 31%,
+    var(--abu) 31% 100%
+  );
+}
+
+/* ===== Kartu putih ===== */
+.kartu {
+  position: relative;
+  overflow: hidden;
+  min-height: 1056px;
+  padding: 60px 36px 40px;
+  background: var(--putih);
+  border-radius: 40px;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.nama {
+  font-family: var(--font-judul);
+  font-weight: 500;
+  font-size: 68px;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+}
+
+.status {
+  position: relative;
+  margin-top: 44px;
+  padding-left: 26px;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+.status::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  width: 9px;
+  height: 9px;
+  background: var(--teks);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.foto {
+  width: 230px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 30px;
+  flex-shrink: 0;
+}
+
+/* ===== Judul bagian ===== */
+.bagian {
+  margin-bottom: 26px;
+}
+
+.judul {
+  width: 242px;
+  padding: 8px 26px;
+  margin-bottom: 18px;
+  font-family: var(--font-judul);
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  color: var(--putih);
+}
+
+.judul.oranye { background: var(--oranye); }
+.judul.gelap  { background: var(--gelap); }
+
+/* ===== Kotak profil ===== */
+.profil {
+  padding: 16px 22px;
+  background: #f3f3f5;
+  border-left: 5px solid var(--oranye);
+  border-radius: 0 16px 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.03em;
+}
+
+/* ===== Daftar ===== */
+.daftar {
+  list-style: none;
+}
+
+.daftar li {
+  display: grid;
+  grid-template-columns: 242px 1fr;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+}
+
+.label {
+  position: relative;
+  padding-left: 24px;
+}
+
+/* titik bullet */
+.label::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  background: var(--teks);
+  border-radius: 50%;
+}
+
+.satu-kolom li {
+  display: block;
+}
+
+/* Hobi: dua kolom */
+.hobi {
+  display: grid;
+  grid-template-columns: 164px 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  width: 340px;
+}
+
+.hobi li {
+  display: block;
+}
+
+/* ===== Dekorasi lengkungan ===== */
+.lengkung {
+  position: absolute;
+  right: 33px;
+  bottom: 0;
+  width: 264px;
+  height: 289px;
+}
+
+.lengkung path {
+  fill: none;
+  stroke: var(--gelap);
+  stroke-width: 3.5;
+}
