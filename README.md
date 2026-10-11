@@ -1,6 +1,6 @@
 # CV Saya
 
-Website Curriculum Vitae (CV) pribadi yang dibuat menggunakan HTML dan CSS.
+(CV) pribadi yang dibuat menggunakan HTML dan CSS.
 
 ## Preview CV
 
